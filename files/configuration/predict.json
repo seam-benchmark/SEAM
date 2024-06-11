@@ -1,0 +1,10 @@
+{
+  "out_dir": "<OUTPUT_DIR>",
+  "run_name": "<RUN_NAME>",
+  "datasets_pickle_path": "<PATH_TO_PICKLE>",
+  "override": false,
+  "truncation_strategy": "max",
+  "max_num_tokens": null,
+  "batch_size": 3,
+  "temperature": 0.8
+}

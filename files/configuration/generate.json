@@ -1,0 +1,43 @@
+{
+  "out_dir": "<OUTPUT_DIR>",
+  "run_name": "<NAME>",
+  "random_seed": 42,
+  "num_different_runs": 10,
+  "num_demonstrations": 3,
+  "max_num_samples": 100,
+  "datasets": [
+    {
+      "name": "ECB",
+      "task": "coreference resolution",
+      "path": "<PATH_TO_ECB>",
+      "split_name": "test_events"
+    },
+    {
+      "name": "FuseReviews",
+      "task": "Fusion in-context",
+      "split_name": "validation"
+    },
+    {
+      "name": "SciCo",
+      "task": "coreference resolution",
+      "split_name": "test"
+    },
+    {
+      "name": "MultiNews",
+      "task": "summarization",
+      "split_name": "test"
+    },
+    {
+      "name": "MusiQue",
+      "task": "question answering",
+      "path": "<PATH_TO_MusiQue>",
+      "split_name": "val"
+    },
+    {
+      "name": "OpenASP",
+      "task": "summarization",
+      "path": "<PATH_TO_OpenASP>",
+      "split_name": "test"
+    }
+  ]
+}

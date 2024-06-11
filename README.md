@@ -62,3 +62,5 @@ bash scripts/eval_all.sh --predictions_path <PATH_TO_PREDICTIONS> --output_path 
 
 The example jsons in the `files/configuration` directory are set to reproduce the results from the paper, 
 as well as `run_all.sh` and `eval_all.sh` scripts.
+
+LLMs predictions over the benchmark instance as presented in the paper, can be found [here](https://drive.google.com/drive/folders/1d8sJIwaL-sEhycWrnwSXIT_3FnOXmxSY?usp=sharing)

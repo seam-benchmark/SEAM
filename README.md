@@ -1,5 +1,7 @@
 # SEAM: A Stochastic Benchmark for Multi-Document Tasks
 
+Project website: [https://seam-benchmark.github.io](https://seam-benchmark.github.io).
+
 ## Download the data
 Some of the datasets included in SEAM can be reached via huggingface datasets (FuseReviews, MultiNews, Scico). 
 

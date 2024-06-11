@@ -4,7 +4,7 @@
   "random_seed": 42,
   "num_different_runs": 10,
   "num_demonstrations": 3,
-  "max_num_samples": 100,
+  "max_num_instances": 100,
   "datasets": [
     {
       "name": "ECB",

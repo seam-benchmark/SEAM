@@ -1,8 +1,8 @@
 while [[ $# -gt 0 ]]; do
     key="$1"
     case $key in
-        -m|--metadata_path)
-            metadata_path="$2"
+        -c|--config)
+            config="$2"
             shift 2
             ;;
       *)
@@ -15,8 +15,8 @@ done
 
 export PYTHONPATH=./
 
-models=("meta-llama/Meta-Llama-3-8B-Instruct" "mistralai/Mistral-7B-Instruct-v0.2" "google/gemma-1.1-2b-it" "google/gemma-1.1-7b-it" "meta-llama/Meta-Llama-3-70B-Instruct" "mistralai/Mixtral-8x7B-Instruct-v0.1")
+models=("meta-llama/Meta-Llama-3-8B-Instruct" "mistralai/Mistral-7B-Instruct-v0.2" "google/gemma-1.1-2b-it" "mistralai/Mixtral-8x7B-Instruct-v0.1" "google/gemma-1.1-7b-it" "meta-llama/Meta-Llama-3-70B-Instruct" "mistralai/Mixtral-8x22B-Instruct-v0.1")
 
 for model in "${models[@]}"; do
-    python run_models.py --model_name "${model}" --metadata_path "${metadata_path}"
+    python scripts/run_model_predictions.py --model_name "${model}" --config "${config}"
 done

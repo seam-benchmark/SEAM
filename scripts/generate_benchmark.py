@@ -58,9 +58,9 @@ def load_all_datasets(num_demos, l_datasets, num_runs, max_num_samples, random_s
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--metadata_path', required=True)
+    parser.add_argument('--config', required=True)
     args = parser.parse_args()
-    metadata_dict = read_metadata(args.metadata_path)
+    metadata_dict = read_metadata(args.config)
     out_dir = metadata_dict['out_dir']
     pickle_out = os.path.join(out_dir, f"datasets_{metadata_dict['run_name']}.pkl")
     print(f"Saving datasets_classes to {pickle_out}")

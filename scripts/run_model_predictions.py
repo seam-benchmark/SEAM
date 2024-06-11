@@ -104,10 +104,10 @@ def get_truncation_strategy(metadata):
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--metadata_path', required=True)
+    parser.add_argument('--config', required=True)
     parser.add_argument('--model_name', required=True)
     args = parser.parse_args()
-    metadata_dict = read_metadata(args.metadata_path)
+    metadata_dict = read_metadata(args.config)
     out_dir, running_mode = handle_out_path_overrides(metadata_dict)
     datasets_pickle = os.path.join(out_dir, metadata_dict["datasets_pickle_path"])
     print(f"Loading datasets from {datasets_pickle}")

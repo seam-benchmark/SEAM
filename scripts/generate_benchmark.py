@@ -12,6 +12,7 @@ import random
 import pickle as pkl
 from datasets import load_dataset
 
+
 def read_metadata(metadata_path):
     with open(metadata_path, 'r') as f:
         meta = json.load(f)
@@ -65,7 +66,7 @@ if __name__ == '__main__':
     pickle_out = os.path.join(out_dir, f"datasets_{metadata_dict['run_name']}.pkl")
     print(f"Saving datasets_classes to {pickle_out}")
     datasets_list = load_all_datasets(metadata_dict['num_demonstrations'],
-                                      metadata_dict['datasets_classes'],
+                                      metadata_dict['datasets'],
                                       num_runs=metadata_dict['num_different_runs'],
                                       max_num_samples=metadata_dict['max_num_samples'],
                                       random_seed=metadata_dict['random_seed'])

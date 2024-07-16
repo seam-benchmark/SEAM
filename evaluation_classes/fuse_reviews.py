@@ -1,8 +1,6 @@
 
 import fic_evaluation
-from evaluation.eval_base_class import Eval
-import torch
-import gc
+from evaluation_classes.eval_base_class import Eval
 
 
 class FuseReviews(Eval):

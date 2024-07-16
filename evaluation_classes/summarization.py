@@ -1,5 +1,5 @@
 
-from evaluation.eval_base_class import Eval
+from evaluation_classes.eval_base_class import Eval
 from rouge_score import rouge_scorer
 
 

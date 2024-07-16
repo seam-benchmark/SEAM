@@ -4,3 +4,8 @@ numpy
 transformers
 torch
 tqdm
+scipy
+matplotlib
+seaborn
+scikit-learn
+tiktoken

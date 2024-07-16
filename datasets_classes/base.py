@@ -68,7 +68,7 @@ class Dataset:
         raise NotImplementedError("This method needs to be implemented by subclasses")
 
     def _get_prompts_from_json(self):
-        json_path = os.path.join("prompts", f"{self.name}.json")
+        json_path = os.path.join("files", "prompts", f"{self.name}.json")
         with open(json_path, 'r', encoding='utf-8') as file:
             prompts = json.load(file)
         return prompts

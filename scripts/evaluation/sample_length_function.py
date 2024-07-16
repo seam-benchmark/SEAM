@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import CubicSpline
 from sklearn.metrics import r2_score
 
-from evaluation.compare_models import tasks_order
+from scripts.evaluation.compare_models import tasks_order
 TOKENS_TRUNCATED = 7500
 # LABELS = {'rouge1': 'R-1', 'rouge2': 'R-2', 'rougeL': 'R-L', 'faithfulness_score': 'faithfulness',
 #           'coverage_score': 'coverage', 'all_f1': 'F1', 'Roug'}

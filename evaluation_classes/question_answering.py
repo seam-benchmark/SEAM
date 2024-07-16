@@ -1,7 +1,7 @@
 import re
 
-from evaluation.eval_base_class import Eval
-from mdqa.MusiQue_metrics.answer import AnswerMetric
+from evaluation_classes.eval_base_class import Eval
+from evaluation_classes.MusiQue_metrics.answer import AnswerMetric
 import numpy as np
 
 

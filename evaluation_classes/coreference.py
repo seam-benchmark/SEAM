@@ -3,6 +3,7 @@ import subprocess
 import numpy as np
 from evaluation_classes.eval_base_class import Eval
 import re
+import os
 
 
 class Coref(Eval):
@@ -92,7 +93,20 @@ class Coref(Eval):
             for mention_id in sorted(mention_to_cluster):
                 target_file.write(f"{mention_id}\t({mention_to_cluster[mention_id]})\n")
             target_file.write("#end document\n")
-        r = subprocess.run(["perl", "/Users/gililior/research/py_repos/reference-coreference-scorers/scorer.pl", "all", conll_gold, conll_pred], capture_output=True)
+        repo_dir_name = os.path.dirname(os.path.abspath(os.curdir))
+        path_to_coref_scorers = os.path.join(repo_dir_name, "reference-coreference-scorers")
+        if not os.path.exists(path_to_coref_scorers):
+            raise FileNotFoundError("Coreference scorer not found. Please clone the repository from "
+                                    "https://github.com/conll/reference-coreference-scorers.git, "
+                                    "and place it in the same root directory as SEAM's repo.")
+        r = subprocess.run(["perl", os.path.join(path_to_coref_scorers, "scorer.pl"),
+                            "all", conll_gold, conll_pred], capture_output=True)
+        if r.stderr:
+            raise subprocess.CalledProcessError(
+                returncode=r.returncode,
+                cmd=r.args,
+                stderr=r.stderr
+            )
         processed = self.process_conll_out(r.stdout.decode())
         return processed
 

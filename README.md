@@ -21,6 +21,22 @@ source <PATH_TO_VENV>/bin/activate
 pip install -r requirements.txt
 ```
 
+In addition, to run the coreference resolution evaluation, you need to install the `reference-coreference-scorers` library,
+at the same directory level as SEAM.
+
+To install the `reference-coreference-scorers` library, run the following command:
+```
+cd SOME_PARENT_DIR  #  the directory where SEAM is located
+https://github.com/conll/reference-coreference-scorers.git
+```
+
+Your directory structure should look like this:
+```
+SOME_PARENT_DIR
+├── SEAM
+└── reference-coreference-scorers
+```
+
 ## Generate a benchmark instance
 
 SEAM is a *benchmark generator* for multi-document tasks. 

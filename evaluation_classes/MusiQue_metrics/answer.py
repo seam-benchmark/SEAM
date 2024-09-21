@@ -6,7 +6,7 @@ import string
 import collections
 from typing import Tuple, List
 
-from mdqa.MusiQue_metrics.metric import Metric
+from evaluation_classes.MusiQue_metrics.metric import Metric
 
 
 def normalize_answer(s):

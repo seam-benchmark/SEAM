@@ -21,7 +21,7 @@ source <PATH_TO_VENV>/bin/activate
 pip install -r requirements.txt
 ```
 
-In addition, to run the coreference resolution evaluation, you need to install the `reference-coreference-scorers` library,
+In addition, to run the coreference resolution evaluation, you need to install the [`reference-coreference-scorers`](https://github.com/conll/reference-coreference-scorers/) library,
 at the same directory level as SEAM.
 
 To install the `reference-coreference-scorers` library, run the following command:

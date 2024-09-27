@@ -27,7 +27,7 @@ at the same directory level as SEAM.
 To install the `reference-coreference-scorers` library, run the following command:
 ```
 cd SOME_PARENT_DIR  #  the directory where SEAM is located
-https://github.com/conll/reference-coreference-scorers.git
+git clone https://github.com/conll/reference-coreference-scorers.git
 ```
 
 Your directory structure should look like this:
